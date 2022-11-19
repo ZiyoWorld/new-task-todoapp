@@ -2,19 +2,21 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
+    
 }
-table, tr, td, th{
-    border: 1px solid black;
+*::-webkit-scrollbar{
+    width: 5px;
+    height: 5px;
 }
-table{
-    width: 100%;
+*::-webkit-scrollbar-track{
+    background: transparent;
 }
-.signin{
-    width: 200px;
-    background-color: black;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    flex-direction: column;
-    color: white;
+*::-webkit-scrollbar-thumb{
+    background-color: #c7c7c7;
+    border: 0;
+    border-radius: 20px;
+}
+*{
+    scrollbar-width: thin;
+    scrollbar-color: rgba(187, 187, 187, 0.5), transparent;
 }
