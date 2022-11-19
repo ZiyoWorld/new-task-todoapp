@@ -1,5 +1,5 @@
 import React, {useState} from 'react'
-import { useHistory } from 'react-router-dom';
+import { useNavigate } from 'react-router-dom';
 
 const Home = () => {
   const [students] = useState([
@@ -13,7 +13,7 @@ const Home = () => {
 
   const [selected, setSelected] = useState({});
 
-  const history = useHistory();
+  const navigate = useNavigate();
   return (
     <div style={{display: "flex"}}>
        <div style={{flex: 1}}>
@@ -23,8 +23,8 @@ const Home = () => {
           return(
             // <h1>{value.id} {value.name} <button onClick={()=>setSelected(value)}>Select</button> 
             // </h1>
-            <h1>
-              {value.id} {value.name} <button onClick={()=> history.push(`home/:${value.id}`)}>Selected</button>
+            <h1 key={value.id}>
+              {value.id} {value.name} <button onClick={()=> navigate.push(`home/:${value.id}`)}>Selected</button>
             </h1>
           )
         })

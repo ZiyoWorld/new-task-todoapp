@@ -1,7 +1,11 @@
 import React from 'react'
+import { Outlet } from 'react-router-dom';
 import { Container, Link } from './style';
+
 const Navbar = () => {
   return (
+    <>
+    
     <Container>
       <Link activeStyle={{color: "coral"}} exact to={'/'}>
           Logo
@@ -19,6 +23,9 @@ const Navbar = () => {
       Elements
       </Link>
     </Container>
+
+      <Outlet />
+    </>
   )
 };
 
